@@ -5,11 +5,18 @@ using namespace std;
 int countWords(string str);
 
 int main() {
-	string sentence;
-	cout << "Enter a sentence: ";
-	getline(cin, sentence);
-	cout << countWords(sentence) << endl;;
-	return 0;
+	while (true) {
+		string sentence;
+		cout << "Enter a string or press Q th quit: ";
+		getline(cin, sentence);
+		if (sentence == "Q" || sentence == "q") {
+			break;
+			return 0;
+		}
+		else {
+			cout << countWords(sentence) << endl;
+		}
+	}
 }
 
 int countWords(string str) {
